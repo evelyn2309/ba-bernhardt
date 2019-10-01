@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 ************************************START ANONYMOUS NETWORK******************************************
+=======
+
+
+***************************************START ANONYMOUS NETWORK***************************************
+>>>>>>> c0094bd7593d825057378f0e0fa54cef985f0288
 
 Generate Keys (before the first usage of the anonymous network)
 - generate a private and public key -> python3 generateRSAkeys.py (modify the len of the generated keys
@@ -22,7 +28,13 @@ Start the anonymization network on Start Sender
 
 
 
+<<<<<<< HEAD
 *********************************INSTALLATION RASPBERRY PI******************************************
+=======
+
+
+***************************************INSTALLATION RASPBERRY PI***************************************
+>>>>>>> c0094bd7593d825057378f0e0fa54cef985f0288
 
 Install Raspberry Pi
 - Install Debian
@@ -61,9 +73,12 @@ Enable usb-media
 - sudo mkdir /media/usbstick
 - sudo blkid -o list -w /dev/null
 - sudo mount -t ext4 -o defaults /dev/sda /media/usbstick
+<<<<<<< HEAD
 
 
 
 *****************************************GITHUB LINK**************************************************
 
 https://github.com/evelyn2309/ba-bernhardt
+=======
+>>>>>>> c0094bd7593d825057378f0e0fa54cef985f0288
