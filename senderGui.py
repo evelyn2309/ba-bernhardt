@@ -229,21 +229,31 @@ class SenderGui(qw.QWidget):
 
         self.message_button.setDisabled(True)
 
-        for i in range(len(self.notified_server["ip"])):
-            if i != "":
-                self.notified_server["ip"][i] = self.notified_server_ip[i].text()
+        self.notified_server = {"ip": [], "port": []}
+        self.participants_bittorrent = {"ip": [], "port": []}
 
-        for i in range(len(self.notified_server["port"])):
-            if i != "":
-                self.notified_server["port"][i] = int(self.notified_server_port[i].text())
+        for i in range(len(self.notified_server_ip)):
+            print(i)
+            if self.notified_server_ip[i].text() != "":
+                self.notified_server["ip"].append(self.notified_server_ip[i].text())
 
-        for i in range(len(self.participants_bittorrent["ip"])):
-            if i != "":
-                self.participants_bittorrent["ip"][i] = self.participants_bittorrent_ip[i].text()
 
-        for i in range(len(self.participants_bittorrent["port"])):
-            if i != "":
-                self.participants_bittorrent["port"][i] = int(self.participants_bittorrent_port[i].text())
+        for i in range(len(self.notified_server_port)):
+            print(i)
+            if self.notified_server_port[i].text() != "":
+                self.notified_server["port"].append(int(self.notified_server_port[i].text()))
+
+
+        for i in range(len(self.participants_bittorrent_ip)):
+            print(i)
+            if self.participants_bittorrent_ip[i].text() != "":
+                self.participants_bittorrent["ip"].append(self.participants_bittorrent_ip[i].text())
+
+
+        for i in range(len(self.participants_bittorrent_port)):
+            print(i)
+            if self.participants_bittorrent_port[i].text() != "":
+                self.participants_bittorrent["port"].append(int(self.participants_bittorrent_port[i].text()))
 
         # refresh txt
         open('notified_server.txt', 'w').write(str(self.notified_server))
