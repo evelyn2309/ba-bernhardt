@@ -230,16 +230,20 @@ class SenderGui(qw.QWidget):
         self.message_button.setDisabled(True)
 
         for i in range(len(self.notified_server["ip"])):
-            self.notified_server["ip"][i] = self.notified_server_ip[i].text()
+            if i != "":
+                self.notified_server["ip"][i] = self.notified_server_ip[i].text()
 
         for i in range(len(self.notified_server["port"])):
-            self.notified_server["port"][i] = int(self.notified_server_port[i].text())
+            if i != "":
+                self.notified_server["port"][i] = int(self.notified_server_port[i].text())
 
         for i in range(len(self.participants_bittorrent["ip"])):
-            self.participants_bittorrent["ip"][i] = self.participants_bittorrent_ip[i].text()
+            if i != "":
+                self.participants_bittorrent["ip"][i] = self.participants_bittorrent_ip[i].text()
 
         for i in range(len(self.participants_bittorrent["port"])):
-            self.participants_bittorrent["port"][i] = int(self.participants_bittorrent_port[i].text())
+            if i != "":
+                self.participants_bittorrent["port"][i] = int(self.participants_bittorrent_port[i].text())
 
         # refresh txt
         open('notified_server.txt', 'w').write(str(self.notified_server))
@@ -260,7 +264,6 @@ class SenderGui(qw.QWidget):
         :return: None.
         """
 
-        print("User has clicked the red x on the main window")
         self.sender.kill()
         event.accept()
 
