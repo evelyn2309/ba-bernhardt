@@ -1,6 +1,6 @@
 
 
-************************************START ANONYMOUS NETWORK******************************************
+***************************************START ANONYMOUS NETWORK***************************************
 
 Generate Keys (before the first usage of the anonymous network)
 - generate a private and public key -> python3 generateRSAkeys.py (modify the len of the generated keys
@@ -26,7 +26,7 @@ Start the anonymization network on Start Sender
 
 
 
-*********************************INSTALLATION RASPBERRY PI******************************************
+***************************************INSTALLATION RASPBERRY PI***************************************
 
 Install Raspberry Pi
 - Install Debian
