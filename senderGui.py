@@ -233,25 +233,21 @@ class SenderGui(qw.QWidget):
         self.participants_bittorrent = {"ip": [], "port": []}
 
         for i in range(len(self.notified_server_ip)):
-            print(i)
             if self.notified_server_ip[i].text() != "":
                 self.notified_server["ip"].append(self.notified_server_ip[i].text())
 
 
         for i in range(len(self.notified_server_port)):
-            print(i)
             if self.notified_server_port[i].text() != "":
                 self.notified_server["port"].append(int(self.notified_server_port[i].text()))
 
 
         for i in range(len(self.participants_bittorrent_ip)):
-            print(i)
             if self.participants_bittorrent_ip[i].text() != "":
                 self.participants_bittorrent["ip"].append(self.participants_bittorrent_ip[i].text())
 
 
         for i in range(len(self.participants_bittorrent_port)):
-            print(i)
             if self.participants_bittorrent_port[i].text() != "":
                 self.participants_bittorrent["port"].append(int(self.participants_bittorrent_port[i].text()))
 
@@ -264,7 +260,7 @@ class SenderGui(qw.QWidget):
 
         # send message
         self.sender.connect_send(self.message.text())
-        time.sleep(20)
+        time.sleep(15)
         self.restart_button.setDisabled(False)
 
     def closeEvent(self, event):
