@@ -1,5 +1,5 @@
 
-************************************START ANONYMOUS NETWORK******************************************
+************************************START ANONYMOUS NETWORK************************************
 
 
 
@@ -65,6 +65,6 @@ Enable usb-media
 - sudo blkid -o list -w /dev/null
 - sudo mount -t ext4 -o defaults /dev/sda /media/usbstick
 
-*****************************************GITHUB LINK**************************************************
+*****************************************GITHUB LINK*****************************************
 
 https://github.com/evelyn2309/ba-bernhardt
